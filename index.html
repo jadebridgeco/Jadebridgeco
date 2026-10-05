@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Jadebridge Co. — professional China sourcing and procurement for brands, businesses and buyers worldwide.">
+<meta name="theme-color" content="#07110d">
+<title>Jadebridge Co. | China Sourcing & Procurement</title>
+<style>
+:root{--green:#0c6b45;--lime:#7ce0af;--deep:#07110d;--black:#090b0a;--cream:#f4f7f3;--white:#fff;--muted:#68736d;--line:#dfe6e1}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#101411;background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:auto}
+.topline{background:#06100c;color:#a9b8b0;font-size:.75rem;padding:8px 0}
+.topline .container{display:flex;justify-content:space-between;gap:15px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px;font-weight:950;letter-spacing:-.055em;font-size:1.15rem}.logo img{width:46px;height:46px;object-fit:cover;display:block}.brand-mark{width:46px;height:46px;border-radius:14px;background:linear-gradient(145deg,#06110c,#0c6b45);color:#7ce0af;display:grid;place-items:center;font-weight:1000;font-size:1.35rem;box-shadow:0 8px 22px rgba(12,107,69,.18);border:1px solid rgba(12,107,69,.28)}
+.logo-mark{width:58px;height:58px;display:grid;place-items:center;overflow:hidden;background:#fff}.logo-mark img{width:100%;height:100%;object-fit:contain}
+.logo span{color:var(--green)}
+.nav-links{display:flex;gap:28px;align-items:center;font-size:.88rem;font-weight:750}
+.nav-links a:hover{color:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border-radius:999px;font-weight:850;border:1px solid transparent;transition:.2s}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:#084f33;transform:translateY(-1px)}
+.btn-dark{background:var(--black);color:#fff}
+.btn-light{background:#fff;color:var(--black)}
+.btn-outline{border-color:rgba(255,255,255,.55);color:#fff}
+.hero{background:radial-gradient(circle at 80% 20%,rgba(34,152,98,.28),transparent 32%),linear-gradient(135deg,#050b08,#0b1d14 58%,#0c6b45 140%);color:#fff;padding:92px 0 72px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center}
+.eyebrow,.kicker{color:var(--green);text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;font-weight:950}
+.hero .eyebrow{color:var(--lime)}
+h1{font-size:clamp(3.2rem,6.2vw,6rem);line-height:.91;letter-spacing:-.07em;max-width:800px}
+.hero-copy{font-size:1.12rem;color:#d1ddd6;max-width:650px;margin:26px 0 32px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-trust{display:flex;gap:24px;flex-wrap:wrap;margin-top:35px;color:#aebdb5;font-size:.82rem}
+.hero-trust span:before{content:"✓";color:var(--lime);font-weight:900;margin-right:7px}
+.hero-visual{min-height:500px;position:relative}
+.visual-main{position:absolute;inset:15px 0 0 30px;border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.035));border:1px solid rgba(255,255,255,.18);overflow:hidden;box-shadow:0 35px 90px rgba(0,0,0,.25)}
+.glow{position:absolute;width:240px;height:240px;border-radius:50%;background:rgba(91,222,157,.18);filter:blur(15px);right:-80px;top:-70px}
+.visual-content{position:absolute;inset:0;padding:30px;display:flex;flex-direction:column;justify-content:space-between}
+.route{font-size:.72rem;color:#a9bbb1;text-transform:uppercase;letter-spacing:.15em;font-weight:850}
+.visual-title{font-size:2.2rem;line-height:1.02;letter-spacing:-.045em;max-width:420px}
+.route-line{display:flex;align-items:center;gap:10px;color:#b9c9c1;font-size:.82rem}
+.route-line i{height:1px;background:rgba(255,255,255,.3);flex:1}
+.visual-mini{position:absolute;left:-2px;bottom:38px;background:#fff;color:#111;border-radius:18px;padding:18px 20px;box-shadow:0 18px 50px rgba(0,0,0,.28);width:190px}
+.visual-mini strong{display:block;font-size:1.35rem}
+.visual-mini small{color:#6d7771}
+.statbar{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.stat{border-top:1px solid rgba(255,255,255,.22);padding-top:12px}.stat strong{display:block;font-size:1.15rem}.stat small{color:#b6c5bd}
+section{padding:92px 0}
+.section-head{max-width:730px;margin-bottom:44px}
+.section-title{font-size:clamp(2.1rem,4.3vw,3.55rem);line-height:1.02;letter-spacing:-.06em;margin:10px 0 15px}
+.section-head p{color:var(--muted);font-size:1.02rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{padding:31px;border:1px solid var(--line);border-radius:23px;background:#fff;transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(11,41,27,.09)}
+.icon{width:48px;height:48px;border-radius:15px;background:#e8f5ef;color:var(--green);display:grid;place-items:center;font-weight:950;margin-bottom:25px}
+.card h3{font-size:1.23rem;margin-bottom:9px}.card p{color:var(--muted);font-size:.96rem}
+.audience{background:var(--cream)}
+.audience-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.audience-card{border-radius:25px;padding:31px;background:#fff;border:1px solid var(--line)}
+.audience-card h3{font-size:1.3rem;margin-bottom:9px}.audience-card p{color:var(--muted)}
+.dark{background:var(--black);color:#fff}.dark .section-head p{color:#aebbb5}.dark .kicker{color:var(--lime)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{padding:26px;border:1px solid #29312d;border-radius:21px}.number{color:var(--lime);font-size:.72rem;font-weight:950}.step h3{margin:14px 0 7px}.step p{color:#aebbb5;font-size:.9rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-panel{background:linear-gradient(145deg,#07110d,#0f6b45);border-radius:30px;color:#fff;min-height:460px;padding:34px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.about-panel:after{content:"JB";position:absolute;right:-30px;top:-55px;font-size:18rem;line-height:1;font-weight:950;color:rgba(255,255,255,.05);letter-spacing:-.1em}
+.about-panel .tag{position:relative;z-index:2;color:#a9efc9;text-transform:uppercase;letter-spacing:.14em;font-size:.7rem;font-weight:900}
+.about-panel h3{position:relative;z-index:2;font-size:2.1rem;line-height:1.03;letter-spacing:-.05em;max-width:450px;margin:10px 0}
+.about-panel p{position:relative;z-index:2;color:#d0e0d8;max-width:500px}
+.checks{display:grid;gap:15px;margin-top:25px}.check{display:flex;gap:12px;align-items:flex-start}.check b{color:var(--green)}
+.quote{background:var(--cream);border-radius:30px;padding:42px;margin-top:25px}.quote p{font-size:1.45rem;line-height:1.3;font-weight:750;letter-spacing:-.025em}.quote small{display:block;color:var(--muted);margin-top:18px}
+.service-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.service-links .btn{padding:10px 15px;font-size:.82rem}.service-detail{scroll-margin-top:100px}.service-detail .quote{height:100%;margin-top:0}.category-banner{min-height:300px;border-radius:28px;overflow:hidden;position:relative;background-size:cover;background-position:center;display:flex;align-items:flex-end}.category-banner:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,10,7,.08),rgba(4,10,7,.82))}.category-banner-copy{position:relative;z-index:2;color:#fff;padding:28px;max-width:680px}.category-banner-copy h3{font-size:2rem;line-height:1.02;letter-spacing:-.04em;margin:8px 0}.category-banner-copy p{color:#dce9e2}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.product{min-height:190px;border-radius:22px;padding:24px;display:flex;align-items:flex-end;color:#fff;background:linear-gradient(145deg,#17221d,#0f6b45);overflow:hidden;position:relative}.product:after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,.07);right:-55px;top:-55px}.product:nth-child(2){background:linear-gradient(145deg,#151515,#39423e)}.product:nth-child(3){background:linear-gradient(145deg,#102018,#193d2c)}.product:nth-child(4){background:linear-gradient(145deg,#111,#1f3128)}.product strong{position:relative;z-index:2;font-size:1.08rem}
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.testimonial{border:1px solid var(--line);border-radius:22px;padding:28px}.stars{color:#0c6b45;letter-spacing:.15em;font-size:.8rem}.testimonial p{font-size:1rem;margin:15px 0;color:#26302b}.testimonial strong{font-size:.85rem}.testimonial small{display:block;color:var(--muted)}
+.faq{display:grid;gap:10px;max-width:900px}details{border-bottom:1px solid var(--line);padding:20px 0}summary{cursor:pointer;font-weight:850;list-style:none}summary::-webkit-details-marker{display:none}details p{color:var(--muted);padding-top:12px}
+.cta{background:linear-gradient(120deg,#0c6b45,#073b27);color:#fff;border-radius:32px;padding:58px}.cta h2{font-size:clamp(2.2rem,4.5vw,3.8rem);line-height:.98;letter-spacing:-.06em;max-width:700px}.cta p{color:#d4eee2;max-width:620px;margin:18px 0 28px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:25px}.contact-card{border:1px solid rgba(255,255,255,.15);border-radius:18px;padding:18px;background:rgba(255,255,255,.06)}.contact-card small{display:block;color:#a7c0b4;text-transform:uppercase;letter-spacing:.1em;font-size:.65rem}.contact-card strong{display:block;margin-top:4px}
+footer{background:#06100c;color:#9eaca5;padding:40px 0}.footer-grid{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.footer-brand{color:#fff;font-weight:950}
+@media(max-width:900px){.nav-links{display:none}.hero-grid,.split,.audience-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.products,.testimonials{grid-template-columns:1fr 1fr}.hero-visual{min-height:400px}}
+@media(max-width:560px){.topline{display:none}section{padding:68px 0}.steps,.products,.testimonials{grid-template-columns:1fr}.hero{padding-top:68px}.hero-visual{min-height:330px}.visual-main{inset:0}.visual-title{font-size:1.75rem}.visual-mini{display:none}.statbar{grid-template-columns:1fr}.cta{padding:34px}.contact-grid{grid-template-columns:1fr}h1{font-size:3.15rem}}
+
+.card-link{display:inline-block;margin-top:20px;color:var(--green);font-size:.82rem;font-weight:900}
+.form-section{background:#f4f7f3}
+.form-wrap{display:grid;grid-template-columns:.78fr 1.22fr;gap:30px;align-items:start}
+.form-intro{padding:10px 0}
+.form-intro p{color:var(--muted);margin-top:16px}
+.form-points{display:grid;gap:12px;margin-top:25px}
+.form-point{display:flex;gap:10px;font-size:.9rem}
+.form-point b{color:var(--green)}
+.quote-form{background:#fff;border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:0 20px 60px rgba(10,35,23,.07)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:900}
+.field input,.field select,.field textarea{width:100%;border:1px solid #d8e0db;border-radius:13px;padding:13px 14px;font:inherit;outline:none;background:#fbfcfb}
+.field textarea{min-height:120px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(12,107,69,.08)}
+.form-note{font-size:.72rem;color:var(--muted);margin-top:12px}
+.social-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.social-pill{border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:9px 14px;color:#d3dfd9;font-size:.78rem}
+@media(max-width:900px){.form-wrap{grid-template-columns:1fr}}
+@media(max-width:560px){.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}}
+
+/* Jade Bridge chat assistant */
+.chat-launcher{position:fixed;right:22px;bottom:22px;z-index:100;width:62px;height:62px;border:0;border-radius:50%;background:#0c6b45;color:#fff;box-shadow:0 14px 35px rgba(0,0,0,.22);cursor:pointer;font-size:25px;font-weight:900;display:grid;place-items:center;transition:.2s}
+.chat-launcher:hover{transform:translateY(-3px);background:#084f33}
+.chat-panel{position:fixed;right:22px;bottom:96px;z-index:101;width:min(380px,calc(100vw - 32px));height:560px;background:#fff;border:1px solid #dfe6e1;border-radius:24px;box-shadow:0 25px 80px rgba(7,17,13,.22);overflow:hidden;display:none;flex-direction:column}
+.chat-panel.open{display:flex}
+.chat-head{background:linear-gradient(135deg,#07110d,#0c6b45);color:#fff;padding:19px 18px;display:flex;align-items:center;justify-content:space-between}
+.chat-brand{display:flex;align-items:center;gap:10px}
+.chat-avatar{width:38px;height:38px;border-radius:12px;background:#7ce0af;color:#07110d;display:grid;place-items:center;font-weight:950}
+.chat-head strong{display:block;font-size:.95rem}.chat-head small{color:#cce8db;font-size:.7rem}
+.chat-close{border:0;background:transparent;color:#fff;font-size:23px;cursor:pointer}
+.chat-body{flex:1;overflow:auto;padding:18px;background:#f7f9f7}
+.chat-msg{max-width:88%;padding:12px 14px;border-radius:16px;margin-bottom:10px;font-size:.87rem;line-height:1.45}
+.chat-msg.bot{background:#fff;border:1px solid #e2e8e4;border-top-left-radius:5px}
+.chat-msg.user{margin-left:auto;background:#0c6b45;color:#fff;border-top-right-radius:5px}
+.chat-lead{display:grid;gap:8px;margin-top:12px}.chat-lead .chat-input{width:100%}.chat-options{display:grid;gap:8px;margin-top:10px}
+.chat-option{border:1px solid #cfdad3;background:#fff;border-radius:12px;padding:10px 12px;text-align:left;cursor:pointer;font:inherit;font-size:.8rem;font-weight:750;color:#173027}
+.chat-option:hover{border-color:#0c6b45;color:#0c6b45}
+.chat-footer{padding:11px;border-top:1px solid #e2e8e4;background:#fff}
+.chat-input-row{display:flex;gap:7px}
+.chat-input{flex:1;border:1px solid #d6dfda;border-radius:12px;padding:11px 12px;font:inherit;font-size:.83rem;outline:none}
+.chat-input:focus{border-color:#0c6b45}
+.chat-send{border:0;border-radius:12px;background:#0c6b45;color:#fff;padding:0 15px;font-weight:900;cursor:pointer}
+.chat-note{font-size:.62rem;color:#7a847f;margin-top:7px;text-align:center}
+@media(max-width:560px){.chat-launcher{right:16px;bottom:16px}.chat-panel{right:16px;bottom:88px;height:calc(100vh - 120px);max-height:600px}}
+
+.image-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.image-card{position:relative;min-height:330px;border-radius:25px;overflow:hidden;background:#102018}
+.image-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s}
+.image-card:hover img{transform:scale(1.04)}
+.image-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.72))}
+.image-label{position:absolute;z-index:2;left:23px;right:23px;bottom:21px;color:#fff}
+.image-label strong{display:block;font-size:1.2rem;letter-spacing:-.025em}
+.image-label span{font-size:.78rem;color:#d8e4de}
+.visual-photo{position:absolute;inset:0;overflow:hidden}
+.visual-photo img{width:100%;height:100%;object-fit:cover;opacity:.75}
+.visual-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,17,13,.86),rgba(7,17,13,.38) 55%,rgba(12,107,69,.68))}
+.photo-story{display:grid;grid-template-columns:.95fr 1.05fr;gap:30px;align-items:stretch}
+.photo-story-image{min-height:430px;border-radius:30px;overflow:hidden;position:relative}
+.photo-story-image img{width:100%;height:100%;object-fit:cover}
+.photo-story-copy{background:var(--cream);border-radius:30px;padding:42px;display:flex;flex-direction:column;justify-content:center}
+.photo-story-copy p{color:var(--muted);margin-top:13px}
+.testimonial-notice{background:#fff;border:1px dashed #b8c8bf;border-radius:22px;padding:28px;color:var(--muted)}
+.testimonial-notice strong{display:block;color:#173027;margin-bottom:7px}
+.testimonial-slots{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.testimonial-slot{border:1px solid var(--line);border-radius:22px;padding:24px;background:#fff}
+.client-photo-placeholder{width:62px;height:62px;border-radius:50%;background:#e8f5ef;color:var(--green);display:grid;place-items:center;font-weight:950;margin-bottom:18px}
+.testimonial-slot h4{margin-bottom:4px}.testimonial-slot small{color:var(--muted)}
+@media(max-width:850px){.image-grid,.photo-story,.testimonial-slots{grid-template-columns:1fr}.photo-story-image{min-height:330px}}
+
+.client-stories{background:#f4f7f3}
+.client-story-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:24px}
+.client-story{background:#fff;border:1px solid var(--line);border-radius:26px;overflow:hidden;box-shadow:0 8px 30px rgba(7,17,13,.05)}
+.client-story img{width:100%;height:250px;object-fit:cover;display:block}
+.client-story-body{padding:25px}
+.client-story h3{font-size:1.35rem;margin-top:13px}
+.client-story .quote{font-size:1rem;color:#39453f;margin:14px 0;line-height:1.65}
+.client-story small{display:block;color:var(--muted)}
+@media(max-width:800px){.client-story-grid{grid-template-columns:1fr}}
+.philosophy-banner{margin-top:22px;min-height:360px;border-radius:30px;overflow:hidden;position:relative;background:#0b1711;color:#fff}.philosophy-banner img{width:100%;height:100%;min-height:360px;object-fit:cover;display:block;opacity:.52}.philosophy-banner:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,12,9,.95),rgba(5,12,9,.5),rgba(5,12,9,.15))}.philosophy-banner-copy{position:absolute;z-index:2;left:42px;right:42px;top:50%;transform:translateY(-50%);max-width:650px}.philosophy-banner-copy h3{font-size:clamp(2rem,4vw,3.7rem);line-height:.98;letter-spacing:-.045em;margin-top:10px}.philosophy-banner-copy p{margin-top:18px;color:#d5e1db;max-width:600px}.contact-card a{color:#b9f2d4;text-decoration:underline}.testimonial-card{display:grid;grid-template-columns:120px 1fr;gap:22px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px}.testimonial-card img{width:120px;height:120px;border-radius:18px;object-fit:cover}.testimonial-card h3{font-size:1.25rem;margin-bottom:5px}.testimonial-card p{color:#4c5952}.testimonial-card small{display:block;color:var(--muted);margin-top:10px}.quote-direct{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.quote-direct .btn{min-width:150px}@media(max-width:700px){.testimonial-card{grid-template-columns:1fr}.testimonial-card img{width:100%;height:220px}.philosophy-banner-copy{left:25px;right:25px}.philosophy-banner{min-height:430px}.philosophy-banner img{min-height:430px}}
+</style>
+</head>
+<body>
+<div class="topline"><div class="container"><span>China sourcing • Procurement • Supplier sourcing</span><span>Serving entrepreneurs, brands & businesses</span></div></div>
+<nav><div class="container nav-inner">
+<a class="logo" href="#home" aria-label="Jadebridge Co. home"><img src="logo.png" alt="Jadebridge Co. logo"></a>
+<div class="nav-links"><a href="#services">Services</a><a href="#procurement">Procurement</a><a href="#about">About</a><a href="#faq">FAQ</a><a class="btn btn-green" href="#quote">Get a Quote</a></div>
+</div></nav>
+
+<main id="home">
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow">Your bridge to China</div>
+<h1>Source smarter. Build better.</h1>
+<p class="hero-copy">Jadebridge Co. helps brands, businesses and buyers source quality products from China, work with suitable suppliers and manage procurement with confidence.</p>
+<div class="hero-actions"><a class="btn btn-green" href="#quote">Request a Quote</a><a class="btn btn-outline" href="#services">Explore Services</a></div>
+<div class="hero-trust"><span>Supplier sourcing</span><span>Procurement support</span></div>
+</div>
+<div class="hero-visual">
+<div class="visual-main"><div class="visual-photo"><img src="https://images.unsplash.com/photo-1586528116493-da8f5b6f1f5a?auto=format&fit=crop&w=1600&q=85" alt="Product inspection and China sourcing warehouse"></div><div class="visual-content">
+<div class="route">JADEBRIDGE CO. • GLOBAL SOURCING</div>
+<div><div class="visual-title">From product idea to confident procurement.</div><div class="route-line" style="margin-top:25px"><span>PRODUCT</span><i></i><span>SUPPLIER</span><i></i><span>PROCUREMENT</span></div></div>
+<div class="statbar"><div class="stat"><strong>01</strong><small>Source</small></div><div class="stat"><strong>02</strong><small>Verify</small></div><div class="stat"><strong>03</strong><small>Procure</small></div></div>
+</div></div>
+<div class="visual-mini"><strong>China → Your Business</strong><small>Practical sourcing support</small></div>
+</div>
+</div>
+</section>
+
+<section id="services"><div class="container">
+<div class="section-head"><div class="kicker">Our services</div><h2 class="section-title">Professional sourcing support for every stage of your business.</h2><p>Whether you're starting small, testing a new product or buying at scale, we help you navigate the China sourcing process with a clear, professional approach.</p></div>
+<div class="cards">
+<article class="card"><div class="icon">01</div><h3>China Product Sourcing</h3><p>We identify suitable Chinese suppliers and products based on your specifications, target market and business goals.</p><a class="card-link" href="#sourcing">Request sourcing →</a></article>
+<article class="card"><div class="icon">02</div><h3>Procurement Services</h3><p>We coordinate supplier communication, quotations and purchasing requirements so you can focus on running and growing your business.</p><a class="card-link" href="#procurement">Explore procurement →</a></article>
+<article class="card"><div class="icon">03</div><h3>Supplier Verification & Quality Control</h3><p>We help you assess supplier information, clarify product specifications and coordinate quality checks before you commit to a purchase.</p><a class="card-link" href="#verification">Explore verification →</a></article>
+</div></div></section>
+
+<section id="sourcing" class="service-detail"><div class="container split">
+<div><div class="kicker">China product sourcing</div><h2 class="section-title">Tell us the product. We’ll help you find the right sourcing path.</h2><p style="color:var(--muted)">Share your product name, photo, specifications, quantity and target market. We can research suitable supplier options and help you compare them.</p><div class="service-links"><a class="btn btn-green" href="#quote">Start a sourcing request →</a><a class="btn btn-dark" href="https://wa.me/2349067771847?text=Hello%20Jadebridge%20Co.%2C%20I%20need%20help%20sourcing%20a%20product%20from%20China." target="_blank" rel="noopener">WhatsApp us →</a></div></div>
+<div class="quote"><p>Best for product ideas, supplier discovery, new launches, retail products and bulk sourcing.</p><small>China product sourcing • Jadebridge Co.</small></div>
+</div></section>
+
+<section id="verification" class="service-detail dark"><div class="container split">
+<div><div class="kicker">Supplier verification & quality control</div><h2 class="section-title">Buy with more information, not more guesswork.</h2><p style="color:#b5c2bc">We help clarify supplier details, product requirements and quality expectations before procurement decisions are made. Where required, quality inspection can be coordinated as part of the agreed scope.</p><div class="service-links"><a class="btn btn-light" href="#quote">Request verification support →</a><a class="btn btn-outline" href="https://wa.me/2349067771847?text=Hello%20Jadebridge%20Co.%2C%20I%20need%20supplier%20verification%20or%20quality%20control%20support." target="_blank" rel="noopener">Ask on WhatsApp →</a></div></div>
+<div class="quote" style="background:#111916;color:#fff"><p>Useful for first-time supplier relationships, private-label products, repeat purchasing and B2B orders.</p><small style="color:#aebbb5">Verification support • China</small></div>
+</div></section>
+
+<section id="procurement" class="dark"><div class="container split">
+<div><div class="kicker">Procurement services</div><h2 class="section-title">You tell us what you need. We help coordinate the sourcing.</h2><p style="color:#b5c2bc">For businesses that don't want to manage every supplier conversation themselves, Jade Bridge can support the procurement journey from sourcing through purchase coordination.</p>
+<div class="checks">
+<div class="check"><b>01</b><span>Product and supplier research</span></div>
+<div class="check"><b>02</b><span>Supplier communication and quotation coordination</span></div>
+<div class="check"><b>03</b><span>Product specification clarification</span></div>
+<div class="check"><b>04</b><span>Procurement coordination based on agreed scope</span></div>
+</div></div>
+<div class="quote" style="background:#111916;color:#fff"><p>Built for brands and buyers who value their time and need a reliable sourcing partner.</p><small style="color:#aebbb5">Procurement support • China</small></div>
+</div></section>
+
+
+
+<section class="audience"><div class="container">
+<div class="section-head"><div class="kicker">Who we help</div><h2 class="section-title">Built for people who want to turn products into businesses.</h2></div>
+<div class="audience-grid">
+<div class="audience-card"><h3>Entrepreneurs & New Importers</h3><p>Get the guidance and sourcing support you need to start importing with a clearer plan and fewer costly mistakes.</p></div>
+<div class="audience-card"><h3>Established Brands & Bulk Buyers</h3><p>Source products, explore suppliers and coordinate procurement for growing businesses, retailers and B2B buyers.</p></div>
+<div class="audience-card"><h3>Amazon & Shopify Sellers</h3><p>Find product opportunities and China-based suppliers for product-led online businesses.</p></div>
+<div class="audience-card"><h3>Businesses That Need Procurement Help</h3><p>Tell us what you need sourced and we can discuss a procurement solution tailored to the project.</p></div>
+</div></div></section>
+
+<section class="dark" id="process"><div class="container">
+<div class="section-head"><div class="kicker">How it works</div><h2 class="section-title">A clear process from requirement to procurement.</h2><p>We make the sourcing journey easier to understand and easier to manage.</p></div>
+<div class="steps">
+<div class="step"><span class="number">01 / DISCOVER</span><h3>Tell us what you need</h3><p>Share your product, specifications, quantity, target market and sourcing goals.</p></div>
+<div class="step"><span class="number">02 / SOURCE</span><h3>We research suppliers</h3><p>We identify suitable supplier options based on the requirements of your project.</p></div>
+<div class="step"><span class="number">03 / COORDINATE</span><h3>We verify & communicate</h3><p>Supplier communication and product details are coordinated before procurement decisions are made.</p></div>
+<div class="step"><span class="number">04 / MOVE</span><h3>You move forward</h3><p>Proceed with a clearer sourcing plan and professional support behind your procurement.</p></div>
+</div></div></section>
+
+<section id="about"><div class="container split">
+<div><div class="kicker">About Jade Bridge</div><h2 class="section-title">Your trusted bridge between your business and China.</h2>
+<p style="color:var(--muted)">Jadebridge Co. was built around a simple idea: sourcing from China should not feel like a gamble. We combine practical importation experience with procurement support to help businesses make informed sourcing decisions.</p>
+<div class="checks">
+<div class="check"><b>✓</b><span>Practical experience with China sourcing and supplier research</span></div>
+<div class="check"><b>✓</b><span>Support designed around your actual product requirements</span></div>
+<div class="check"><b>✓</b><span>Support for entrepreneurs, brands, retailers and B2B buyers</span></div>
+<div class="check"><b>✓</b><span>Clear communication from sourcing brief to procurement</span></div>
+</div>
+<div class="philosophy-banner">
+<img src="https://images.unsplash.com/photo-1586528116493-da8f5b6f1f5a?auto=format&fit=crop&w=1600&q=85" alt="Professional supplier and product inspection in a manufacturing facility">
+<div class="philosophy-banner-copy"><div class="kicker" style="color:#7ce0af">Jadebridge Co. philosophy</div><h3>Better sourcing creates better business opportunities.</h3><p>We believe the right supplier relationship starts with clarity—knowing what you need, asking the right questions and making procurement decisions based on your actual business goals.</p></div>
+</div>
+</div>
+<div class="about-panel"><div class="tag">Jadebridge Co.</div><h3>Better sourcing creates better business opportunities.</h3><p>From first-time importers to established brands, every sourcing project deserves clarity, communication and attention to detail.</p></div>
+</div></section>
+
+<section><div class="container"><div class="section-head"><div class="kicker">What can we help you source?</div><h2 class="section-title">Products across categories with real business potential.</h2><p>These are examples—not limits. Tell us what you’re looking for and we’ll assess the sourcing requirement.</p></div>
+<div class="image-grid">
+<div class="category-banner" style="background-image:url(https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1400&q=85)"><div class="category-banner-copy"><div class="kicker" style="color:#7ce0af">01</div><h3>Beauty & Personal Care</h3><p>Skincare, haircare, beauty tools, wellness and everyday personal-care products.</p></div></div>
+<div class="category-banner" style="background-image:url(https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1400&q=85)"><div class="category-banner-copy"><div class="kicker" style="color:#7ce0af">02</div><h3>Home & Lifestyle</h3><p>Kitchenware, home organisation, household products, décor and lifestyle goods.</p></div></div>
+<div class="category-banner" style="background-image:url(https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=85)"><div class="category-banner-copy"><div class="kicker" style="color:#7ce0af">03</div><h3>Business & B2B Products</h3><p>Bulk products, commercial supplies, equipment and business-use sourcing.</p></div></div>
+</div></div></section>
+
+<section class="audience client-stories"><div class="container"><div class="section-head"><div class="kicker">Client feedback</div><h2 class="section-title">What our clients say.</h2><p>Thoughtful sourcing support, clearer supplier communication and a more confident procurement process.</p></div>
+<div class="client-story-grid">
+<div class="client-story"><img src="client-adenike.jpg" alt="Adenike Bello"><div class="client-story-body"><h3>Adenike Bello</h3><p class="quote">“The sourcing process felt much more organised once I had support with the supplier conversations and product requirements. It made everything feel clearer and easier to manage.”</p></div></div>
+<div class="client-story"><img src="client-fashion.jpg" alt="Amara Okafor"><div class="client-story-body"><h3>Amara Okafor</h3><p class="quote">“I had a product in mind but wasn't sure how to approach suppliers. The process helped me structure what I needed and compare my options with more confidence.”</p></div></div>
+<div class="client-story"><img src="client-home.jpg" alt="Sophia Mensah"><div class="client-story-body"><h3>Sophia Mensah</h3><p class="quote">“Having someone help coordinate the sourcing process made it much less overwhelming. I appreciated the clear communication and attention to the details.”</p></div></div>
+<div class="client-story"><img src="client-b2b.jpg" alt="Daniel Carter"><div class="client-story-body"><h3>Daniel Carter</h3><p class="quote">“For a bulk sourcing requirement, clarity matters. The structured approach made it easier to communicate our requirements and move forward with confidence.”</p></div></div>
+</div></div></section>
+
+<section id="faq"><div class="container"><div class="section-head"><div class="kicker">FAQ</div><h2 class="section-title">Before you start, here's what you should know.</h2></div>
+<div class="faq">
+<details><summary>Can you source a product if I only have a photo or video?</summary><p>Yes. Product photos, videos, descriptions and specifications can be used as a starting point for a sourcing request.</p></details>
+<details><summary>Do you work with clients outside Nigeria?</summary><p>Yes. Jadebridge Co. is positioned to support international clients who need China-based sourcing and procurement assistance.</p></details>
+<details><summary>Can you procure the products for me?</summary><p>Procurement arrangements can be discussed based on your product, order volume and the scope of support required.</p></details>
+<details><summary>How do I start a sourcing request?</summary><p>Use the enquiry button below and send your product details, quantity, target price if available and any reference images or specifications.</p></details>
+</div></div></section>
+
+<section id="quote" class="form-section"><div class="container form-wrap">
+<div class="form-intro"><div class="kicker">Request a quote</div><h2 class="section-title">Let's discuss what you need sourced.</h2><p>Give us a few details about your product or procurement requirement. This form is designed to help you start the conversation clearly.</p>
+<div class="form-points"><div class="form-point"><b>✓</b><span>Product sourcing from China</span></div><div class="form-point"><b>✓</b><span>Supplier sourcing and procurement</span></div><div class="form-point"><b>✓</b><span>Bulk and B2B sourcing projects</span></div></div>
+</div>
+<form class="quote-form" onsubmit="sendQuote(event)">
+<div class="form-grid">
+<div class="field"><label>Full name</label><input id="qname" required placeholder="Your name"></div>
+<div class="field"><label>Email</label><input id="qemail" type="email" required placeholder="you@example.com"></div>
+<div class="field"><label>WhatsApp / Phone</label><input id="qphone" placeholder="+234..."></div>
+<div class="field"><label>Service</label><select id="qservice"><option>Product sourcing</option><option>Procurement service</option><option>Supplier sourcing</option></select></div>
+<div class="field"><label>Product / category</label><input id="qproduct" required placeholder="What do you want to source?"></div>
+<div class="field"><label>Estimated quantity</label><input id="qqty" placeholder="e.g. 100 units"></div>
+<div class="field full"><label>Tell us about your requirement</label><textarea id="qmessage" required placeholder="Product specifications, target market, preferred quantity, target price if known, links/photos you have, etc."></textarea></div>
+<div class="field full"><button class="btn btn-green" type="submit">Review & Send via WhatsApp</button></div>
+</div>
+<div class="form-note">WhatsApp will open with a prepared message containing your details. You can edit the message before sending it, or replace it completely with your own message.</div>
+</form></div></section>
+</main>
+
+
+<section id="contact"><div class="container"><div class="cta">
+<div class="kicker" style="color:#b9f2d4">Let's work together</div><h2>Ready to source with clarity and confidence?</h2><p>Tell us what you need sourced, where you are based and what your business requires. We’ll help you choose the right next step.</p>
+<a class="btn btn-light" href="#quote" onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'}); return false;">Request a Quote</a>
+<div class="contact-grid">
+<div class="contact-card"><small>WhatsApp</small><strong><a id="contactWhatsApp" href="https://wa.me/2349067771847" target="_blank" rel="noopener">+234 906 777 1847</a></strong></div>
+<div class="contact-card"><small>Email</small><strong><a id="contactEmail" href="mailto:jadebridgeco@gmail.com">jadebridgeco@gmail.com</a></strong></div>
+</div>
+<div class="social-row"><a class="social-pill" href="https://wa.me/2349067771847" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a><a class="social-pill" href="mailto:jadebridgeco@gmail.com" aria-label="Email">Email</a></div>
+</div></div></section>
+
+<script>
+function sendQuote(e){
+  e.preventDefault();
+  const number = "2349067771847";
+    const data = [
+    "Hello Jadebridge Co., I would like to make a sourcing enquiry.",
+    "",
+    "Name: " + document.getElementById("qname").value,
+    "Email: " + document.getElementById("qemail").value,
+    "WhatsApp/Phone: " + document.getElementById("qphone").value,
+    "Service: " + document.getElementById("qservice").value,
+    "Product/Category: " + document.getElementById("qproduct").value,
+    "Estimated Quantity: " + document.getElementById("qqty").value,
+    "Requirement: " + document.getElementById("qmessage").value
+  ].join("\\n");
+  window.open("https://wa.me/" + number + "?text=" + encodeURIComponent(data), "_blank");
+}
+</script>
+
+<footer><div class="container footer-grid"><div><div class="footer-brand">Jadebridge Co.</div><div style="margin-top:6px">Global sourcing & procurement from China.</div></div><div>© 2026 Jadebridge Co. All rights reserved.</div></div></footer>
+
+<!-- Jadebridge Co. website assistant -->
+<button class="chat-launcher" id="chatLauncher" aria-label="Open Jade Bridge chat">💬</button>
+
+<div class="chat-panel" id="chatPanel" role="dialog" aria-label="Jade Bridge Assistant">
+  <div class="chat-head">
+    <div class="chat-brand">
+      <div class="chat-avatar">J</div>
+      <div><strong>Jadebridge Co. Assistant</strong><small>China sourcing & procurement</small></div>
+    </div>
+    <button class="chat-close" id="chatClose" aria-label="Close chat">×</button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="chat-msg bot">Hi 👋 Welcome to Jadebridge Co. I can help with product sourcing, supplier verification, procurement and general sourcing questions.</div>
+    <div class="chat-msg bot">Before we continue, please share your details so we can keep your enquiry connected to you.</div>
+    <div class="chat-lead" id="chatLead">
+      <input id="leadName" class="chat-input" placeholder="Full name" autocomplete="name">
+      <input id="leadEmail" class="chat-input" type="email" placeholder="Email address" autocomplete="email">
+      <input id="leadPhone" class="chat-input" placeholder="WhatsApp / phone number" autocomplete="tel">
+      <button class="chat-send" id="leadSave" type="button">Continue</button>
+    </div>
+    <div id="chatConversation" style="display:none"><div class="chat-msg bot">Thanks. You can now ask your question or choose a starting point.</div>
+      <div class="chat-options" id="chatOptions">
+        <button class="chat-option" data-answer="supplier">🔎 I need a supplier</button>
+        <button class="chat-option" data-answer="procurement">📦 I need procurement support</button>
+        <button class="chat-option" data-answer="international">🌍 I’m an international client</button>
+        <button class="chat-option" data-answer="quote">💬 I want to request a quote</button>
+      </div>
+    </div>
+  </div>
+  <div class="chat-footer">
+    <div class="chat-input-row">
+      <input class="chat-input" id="chatInput" placeholder="Type your question..." autocomplete="off">
+      <button class="chat-send" id="chatSend">Send</button>
+    </div>
+    <div class="chat-note">For detailed enquiries, the assistant can direct you to WhatsApp or our quote form.</div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const launcher=document.getElementById('chatLauncher');
+  const panel=document.getElementById('chatPanel');
+  const close=document.getElementById('chatClose');
+  const body=document.getElementById('chatBody');
+  const input=document.getElementById('chatInput');
+  const send=document.getElementById('chatSend');
+  const lead=document.getElementById('chatLead');
+  const leadSave=document.getElementById('leadSave');
+  const conversation=document.getElementById('chatConversation');
+  let leadData=JSON.parse(localStorage.getItem('jadebridgeLead')||'null');
+  let history=[];
+
+  function openChat(){panel.classList.add('open'); if(leadData){lead.style.display='none';conversation.style.display='block';input.focus()} else document.getElementById('leadName').focus()}
+  function closeChat(){panel.classList.remove('open')}
+  function addMessage(text,type){const div=document.createElement('div');div.className='chat-msg '+type;div.textContent=text;body.appendChild(div);body.scrollTop=body.scrollHeight}
+  function addAction(text,href){const wrap=document.createElement('div');wrap.className='chat-options';const a=document.createElement('a');a.className='chat-option';a.href=href;a.textContent=text;a.addEventListener('click',()=>closeChat());wrap.appendChild(a);body.appendChild(wrap);body.scrollTop=body.scrollHeight}
+  function saveLead(){
+    const name=document.getElementById('leadName').value.trim(), email=document.getElementById('leadEmail').value.trim(), phone=document.getElementById('leadPhone').value.trim();
+    if(!name||!email||!phone){alert('Please enter your name, email and phone number to continue.');return}
+    leadData={name,email,phone,createdAt:new Date().toISOString()};localStorage.setItem('jadebridgeLead',JSON.stringify(leadData));
+    lead.style.display='none';conversation.style.display='block';addMessage('My details: '+name+' • '+email+' • '+phone,'user');addMessage('Thank you. What would you like help with?','bot');input.focus();
+  }
+  async function askAI(text){
+    addMessage(text,'user');history.push({role:'user',content:text});
+    try{
+      const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:text,lead:leadData,history})});
+      if(!r.ok) throw new Error('chat api unavailable');
+      const data=await r.json(); const reply=data.reply||data.message||'Thanks. Please use our quote form or WhatsApp for a detailed sourcing enquiry.';
+      history.push({role:'assistant',content:reply}); addMessage(reply,'bot');
+    }catch(err){
+      const lower=text.toLowerCase();
+      let reply='I can help with product sourcing, supplier verification, procurement and China sourcing questions. For a detailed enquiry, please use the Request a Quote form.';
+      if(/supplier|source|factory|manufacturer/.test(lower)) reply='We can help research suitable suppliers based on your product, specifications, quantity and target market. You can start a sourcing request below.';
+      else if(/procure|bulk|purchase|b2b/.test(lower)) reply='Our procurement support can cover supplier communication, quotations, product requirements and purchase coordination based on the agreed scope.';
+      else if(/price|cost|quote/.test(lower)) reply='Pricing depends on the product, quantity, specifications and sourcing scope. Send the details through our quote form for a proper assessment.';
+      addMessage(reply,'bot');
+    }
+  }
+  function answer(key){const text={supplier:'I need a supplier',procurement:'I need procurement support',international:'I’m an international client',quote:'I want to request a quote'}[key];if(text) askAI(text);if(key==='quote')setTimeout(()=>addAction('Open Request a Quote →','#quote'),300);if(key==='supplier')setTimeout(()=>addAction('Start a sourcing request →','#sourcing'),300);if(key==='procurement')setTimeout(()=>addAction('View procurement support →','#procurement'),300)}
+  launcher.addEventListener('click',()=>panel.classList.contains('open')?closeChat():openChat());
+  close.addEventListener('click',closeChat); leadSave.addEventListener('click',saveLead);
+  document.querySelectorAll('.chat-option[data-answer]').forEach(btn=>btn.addEventListener('click',()=>answer(btn.dataset.answer)));
+  function submit(){const text=input.value.trim();if(!text)return;input.value='';askAI(text)}
+  send.addEventListener('click',submit);input.addEventListener('keydown',e=>{if(e.key==='Enter')submit()});
+})();
+</script>
+</body>
+</html>
