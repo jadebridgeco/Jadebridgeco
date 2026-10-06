@@ -230,6 +230,54 @@ footer{background:#06100c;color:#9eaca5;padding:40px 0}.footer-grid{display:flex
 /* Service-card banners also keep their complete source composition */
 .service-card .service-card-image{height:auto;aspect-ratio:2.5/1;margin-bottom:24px;overflow:hidden}
 .service-card .service-card-image img{width:100%;height:100%;object-fit:cover;object-position:center}
+
+/* Final responsive corrections requested by client */
+.nav-inner{min-height:92px}
+.logo{min-width:110px;position:relative;display:flex;align-items:center}
+.logo img{width:104px;height:104px;object-fit:contain;padding:0;background:transparent;border-radius:0;filter:drop-shadow(0 7px 16px rgba(12,107,69,.22)) drop-shadow(0 2px 8px rgba(201,151,55,.22))}
+.logo:after{left:-8px;top:50%;width:120px;height:120px;border-radius:50%;border:1px solid rgba(12,107,69,.20);box-shadow:0 0 26px rgba(12,107,69,.10),inset 0 0 18px rgba(201,151,55,.08)}
+/* Never let the hero mini-card cover the hero visual or the following section. */
+.hero-visual{display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+.hero-visual .visual-main{position:relative;inset:auto;width:100%;aspect-ratio:2.5/1}
+.hero-visual .visual-mini{position:static;align-self:flex-start;width:190px;margin:0;z-index:2}
+/* Full banner compositions: contain rather than crop. */
+.clean-visual-banner{background:#eef4ef}
+.clean-visual-banner img{object-fit:contain!important;object-position:center!important;background:#eef4ef}
+.procurement-banner-card.clean-visual-banner{aspect-ratio:2.5/1;height:auto}
+.philosophy-banner.clean-visual-banner{aspect-ratio:2.5/1;height:auto}
+.service-banner-wrap{width:100%;min-width:0;display:flex;flex-direction:column;gap:14px}
+.service-banner-wrap .service-banner-card{width:100%;height:auto;min-height:0;aspect-ratio:2.5/1;flex:0 0 auto}
+.service-banner-wrap .service-banner-card img{width:100%;height:100%;object-fit:contain!important;object-position:center!important}
+.service-banner-copy{position:static!important;display:block!important;width:100%;padding:0 2px;margin:0;line-height:1.45;overflow:visible}
+.service-banner-copy p{margin:0!important;font-size:.86rem;line-height:1.45;font-weight:700}
+.service-banner-copy small{margin-top:4px}
+/* The approved generated verification banner has its own complete composition. */
+#verification .service-banner-card{aspect-ratio:2/1}
+#verification .service-banner-card img{object-fit:contain!important;background:#07110d}
+/* Service cards: clean vertical flow; no text can overlap the image or another card. */
+.cards{align-items:stretch}
+.service-card{display:flex;flex-direction:column;min-width:0;overflow:hidden}
+.service-card .service-card-image{width:100%;height:auto;aspect-ratio:2.5/1;margin-bottom:22px;flex:0 0 auto}
+.service-card .service-card-image img{width:100%;height:100%;object-fit:contain!important;background:#eef4ef}
+.service-card .icon{margin-top:0}
+.service-card h3,.service-card p,.service-card .card-link{position:relative;z-index:2}
+/* Category banners keep their complete supplied composition. */
+.category-grid{align-items:stretch}
+.category-card{min-width:0}
+.category-image{width:100%;height:auto;aspect-ratio:2.5/1;object-fit:contain!important;background:#eef4ef}
+/* Country selector shows country name + code and remains usable on mobile. */
+.country-phone{grid-template-columns:minmax(185px,1.35fr) 1fr}
+.country-phone select{width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:900px){.nav-inner{min-height:92px}.logo{min-width:96px}.logo img{width:92px;height:92px}.logo:after{width:106px;height:106px}.hero-visual{align-items:stretch}.hero-visual .visual-mini{align-self:flex-start}.category-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){
+  .nav-inner{min-height:88px}.logo{min-width:92px}.logo img{width:88px;height:88px}.logo:after{width:102px;height:102px;left:-7px}
+  .hero-visual .visual-main{aspect-ratio:2.5/1}.hero-visual .visual-mini{display:block;width:180px}
+  .procurement-banner-card.clean-visual-banner,.philosophy-banner.clean-visual-banner{aspect-ratio:2.5/1}
+  .service-banner-wrap .service-banner-card{aspect-ratio:2.5/1}
+  #verification .service-banner-card{aspect-ratio:2/1}
+  .category-grid{grid-template-columns:1fr}.category-image{aspect-ratio:2.5/1}
+  .cards{grid-template-columns:1fr}.country-phone{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -282,7 +330,7 @@ footer{background:#06100c;color:#9eaca5;padding:40px 0}.footer-grid{display:flex
 
 <section id="verification" class="service-detail dark"><div class="container split">
 <div><div class="kicker">Supplier verification & quality control</div><h2 class="section-title">Buy with more information, not more guesswork.</h2><p style="color:#b5c2bc">We help clarify supplier details, product requirements and quality expectations before procurement decisions are made. Where required, quality inspection can be coordinated as part of the agreed scope.</p><div class="service-links"><a class="btn btn-light" href="https://wa.me/2349067771847?text=Hello%20Jadebridge%20Co.%2C%20I%20would%20like%20to%20explore%20supplier%20verification%20and%20quality%20control." target="_blank" rel="noopener">Explore verification →</a><a class="btn btn-outline" href="https://wa.me/2349067771847?text=Hello%20Jadebridge%20Co.%2C%20I%20need%20supplier%20verification%20or%20quality%20control%20support." target="_blank" rel="noopener">Ask on WhatsApp →</a></div></div>
-<div class="service-banner-wrap"><div class="service-banner-card clean-visual-banner"><img src="verification-clean.jpg" alt="Supplier verification and quality-control collaboration"></div><div class="service-banner-copy"><p>Useful for first-time supplier relationships, private-label products, repeat purchasing and B2B orders.</p><small>Verification support • China</small></div></div>
+<div class="service-banner-wrap"><div class="service-banner-card clean-visual-banner"><img src="verification-generated-banner.png" alt="Supplier verification and quality control"></div><div class="service-banner-copy"><p>Useful for first-time supplier relationships, private-label products, repeat purchasing and B2B orders.</p><small>Verification support • China</small></div></div>
 </div></section>
 
 <section id="procurement" class="dark"><div class="container split">
@@ -361,7 +409,7 @@ footer{background:#06100c;color:#9eaca5;padding:40px 0}.footer-grid{display:flex
 <div class="form-grid">
 <div class="field"><label>Full name</label><input id="qname" required placeholder="Your name"></div>
 <div class="field"><label>Email</label><input id="qemail" type="email" required placeholder="you@example.com"></div>
-<div class="field"><label>Phone / WhatsApp</label><div class="country-phone"><select id="qcountry" aria-label="Country code"><option value="+234">🇳🇬 +234</option><option value="+1">🇺🇸 +1</option><option value="+44">🇬🇧 +44</option><option value="+1">🇨🇦 +1</option><option value="+971">🇦🇪 +971</option><option value="+966">🇸🇦 +966</option><option value="+27">🇿🇦 +27</option><option value="+254">🇰🇪 +254</option><option value="+233">🇬🇭 +233</option><option value="+61">🇦🇺 +61</option><option value="+49">🇩🇪 +49</option><option value="+33">🇫🇷 +33</option><option value="+39">🇮🇹 +39</option><option value="+34">🇪🇸 +34</option><option value="+81">🇯🇵 +81</option><option value="+86">🇨🇳 +86</option><option value="+65">🇸🇬 +65</option><option value="+91">🇮🇳 +91</option><option value="+55">🇧🇷 +55</option><option value="+52">🇲🇽 +52</option><option value="+31">🇳🇱 +31</option><option value="+32">🇧🇪 +32</option><option value="+41">🇨🇭 +41</option><option value="+46">🇸🇪 +46</option><option value="+47">🇳🇴 +47</option><option value="+45">🇩🇰 +45</option><option value="+358">🇫🇮 +358</option><option value="+48">🇵🇱 +48</option><option value="+351">🇵🇹 +351</option><option value="+90">🇹🇷 +90</option><option value="+972">🇮🇱 +972</option><option value="+974">🇶🇦 +974</option><option value="+965">🇰🇼 +965</option><option value="+973">🇧🇭 +973</option><option value="+968">🇴🇲 +968</option><option value="+60">🇲🇾 +60</option><option value="+62">🇮🇩 +62</option><option value="+66">🇹🇭 +66</option><option value="+84">🇻🇳 +84</option><option value="+82">🇰🇷 +82</option><option value="+64">🇳🇿 +64</option></select><input id="qphone" placeholder="Phone number"></div></div>
+<div class="field"><label>Phone / WhatsApp</label><div class="country-phone"><select id="qcountry" aria-label="Country and country code"><option value="+234">🇳🇬 Nigeria (+234)</option><option value="+1">🇺🇸 United States (+1)</option><option value="+44">🇬🇧 United Kingdom (+44)</option><option value="+1">🇨🇦 Canada (+1)</option><option value="+971">🇦🇪 United Arab Emirates (+971)</option><option value="+966">🇸🇦 Saudi Arabia (+966)</option><option value="+27">🇿🇦 South Africa (+27)</option><option value="+254">🇰🇪 Kenya (+254)</option><option value="+233">🇬🇭 Ghana (+233)</option><option value="+61">🇦🇺 Australia (+61)</option><option value="+49">🇩🇪 Germany (+49)</option><option value="+33">🇫🇷 France (+33)</option><option value="+39">🇮🇹 Italy (+39)</option><option value="+34">🇪🇸 Spain (+34)</option><option value="+81">🇯🇵 Japan (+81)</option><option value="+86">🇨🇳 China (+86)</option><option value="+65">🇸🇬 Singapore (+65)</option><option value="+91">🇮🇳 India (+91)</option><option value="+55">🇧🇷 Brazil (+55)</option><option value="+52">🇲🇽 Mexico (+52)</option><option value="+31">🇳🇱 Netherlands (+31)</option><option value="+32">🇧🇪 Belgium (+32)</option><option value="+41">🇨🇭 Switzerland (+41)</option><option value="+46">🇸🇪 Sweden (+46)</option><option value="+47">🇳🇴 Norway (+47)</option><option value="+45">🇩🇰 Denmark (+45)</option><option value="+358">🇫🇮 Finland (+358)</option><option value="+48">🇵🇱 Poland (+48)</option><option value="+351">🇵🇹 Portugal (+351)</option><option value="+90">🇹🇷 Türkiye (+90)</option><option value="+972">🇮🇱 Israel (+972)</option><option value="+974">🇶🇦 Qatar (+974)</option><option value="+965">🇰🇼 Kuwait (+965)</option><option value="+973">🇧🇭 Bahrain (+973)</option><option value="+968">🇴🇲 Oman (+968)</option><option value="+60">🇲🇾 Malaysia (+60)</option><option value="+62">🇮🇩 Indonesia (+62)</option><option value="+66">🇹🇭 Thailand (+66)</option><option value="+84">🇻🇳 Vietnam (+84)</option><option value="+82">🇰🇷 South Korea (+82)</option><option value="+64">🇳🇿 New Zealand (+64)</option></select><input id="qphone" placeholder="Phone number"></div></div>
 <div class="field"><label>Service</label><select id="qservice"><option>Product sourcing</option><option>Procurement service</option><option>Supplier sourcing</option></select></div>
 <div class="field"><label>Product / category</label><input id="qproduct" required placeholder="What do you want to source?"></div>
 <div class="field"><label>Estimated quantity</label><input id="qqty" placeholder="e.g. 100 units"></div>
