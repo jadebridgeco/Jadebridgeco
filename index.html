@@ -196,6 +196,40 @@ footer{background:#06100c;color:#9eaca5;padding:40px 0}.footer-grid{display:flex
 /* Jadebridge Co. premium visual refinements */
 .logo{display:flex;align-items:center;min-width:245px}.logo img{width:235px;height:auto;display:block;filter:drop-shadow(0 7px 18px rgba(12,107,69,.20)) drop-shadow(0 2px 7px rgba(201,151,55,.20));background:#fff;border-radius:50%;padding:3px}.clean-visual-banner{overflow:hidden;border-radius:26px;background:#eef4ef}.clean-visual-banner img{width:100%;height:100%;display:block;object-fit:cover}.clean-banner-intro{margin-bottom:18px}.clean-banner-intro h2{font-size:clamp(2rem,4vw,3.25rem);letter-spacing:-.045em;line-height:1.03;margin-top:8px;max-width:760px}.clean-banner-intro .banner-route{margin-top:18px}.service-banner-wrap{display:flex;flex-direction:column;gap:12px}.service-banner-wrap .service-banner-card{height:245px}.service-banner-copy{padding:0 4px}.service-banner-copy p{margin:0;color:var(--muted);font-weight:750}.service-banner-copy small{display:block;margin-top:5px;color:#75817b;font-size:.68rem}.philosophy-banner.clean-visual-banner{height:310px;margin-top:28px;min-height:0}.philosophy-banner.clean-visual-banner img{min-height:0;opacity:1}.philosophy-banner.clean-visual-banner:after{display:none}.whatsapp-icon-link{display:inline-flex;align-items:center;gap:10px}.whatsapp-icon-link svg{width:34px;height:34px;fill:#25D366;display:block}.contact-whatsapp{color:#fff}.contact-card strong{min-height:38px;display:flex;align-items:center}.contact-card .whatsapp-icon-link span{font-size:.95rem;font-weight:850}.service-banner-card.clean-visual-banner:after{display:none}.procurement-banner-card.clean-visual-banner{height:360px}.procurement-banner-card.clean-visual-banner img{object-position:center 48%}.service-card-image img{object-position:center 45%}
 @media(max-width:560px){.logo{min-width:190px}.logo img{width:185px}.procurement-banner-card.clean-visual-banner{height:250px}.service-banner-wrap .service-banner-card{height:190px}.philosophy-banner.clean-visual-banner{height:220px}}
+
+/* Final banner and header corrections */
+.logo{min-width:108px;position:relative;display:flex;align-items:center;justify-content:flex-start}
+.logo:after{display:none}
+.logo img{width:94px;height:94px;object-fit:contain;display:block;background:#fff;border-radius:50%;padding:4px;border:3px solid transparent;background-image:linear-gradient(#fff,#fff),linear-gradient(135deg,#0c6b45 0%,#7ce0af 48%,#c99737 100%);background-origin:border-box;background-clip:padding-box,border-box;box-shadow:0 7px 22px rgba(12,107,69,.18),0 2px 10px rgba(201,151,55,.16);filter:none}
+.nav-inner{min-height:98px}
+.service-banner-wrap .service-banner-card{height:auto;min-height:0;aspect-ratio:2.5/1}
+.service-banner-card{height:auto;min-height:0}
+.service-banner-card img{width:100%;height:100%;min-height:0;object-fit:cover;object-position:center}
+.service-banner-card.clean-visual-banner:before,.service-banner-card.clean-visual-banner:after{display:none}
+.procurement-banner-card.clean-visual-banner{height:auto;min-height:0;aspect-ratio:2.5/1}
+.procurement-banner-card.clean-visual-banner img{height:100%;object-fit:cover;object-position:center}
+.philosophy-banner.clean-visual-banner{height:auto;min-height:0;aspect-ratio:2.5/1}
+.philosophy-banner.clean-visual-banner img{height:100%;min-height:0;object-fit:cover;object-position:center}
+.category-grid{grid-template-columns:repeat(3,1fr);align-items:start}
+.category-card{border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 12px 32px rgba(7,17,13,.06)}
+.category-image{width:100%;aspect-ratio:2.5/1;height:auto;display:block;object-fit:cover;object-position:center}
+.category-card .category-banner-copy{position:static;color:#111;padding:22px 22px 24px;max-width:none}
+.category-card .category-banner-copy .kicker{color:var(--green)!important}
+.category-card .category-banner-copy h3{font-size:1.35rem;line-height:1.05;letter-spacing:-.035em;margin:7px 0 8px}
+.category-card .category-banner-copy p{color:var(--muted);font-size:.9rem;line-height:1.5}
+@media(max-width:900px){.category-grid{grid-template-columns:1fr 1fr}.nav-inner{min-height:92px}.logo img{width:84px;height:84px}}
+@media(max-width:560px){.logo{min-width:82px}.logo img{width:76px;height:76px}.nav-inner{min-height:82px}.service-banner-wrap .service-banner-card{aspect-ratio:2.5/1}.procurement-banner-card.clean-visual-banner{aspect-ratio:2.5/1}.philosophy-banner.clean-visual-banner{aspect-ratio:2.5/1}.category-grid{grid-template-columns:1fr}.category-image{aspect-ratio:2.5/1}}
+
+/* Hero image: preserve the complete clean sourcing banner */
+.hero-visual{min-height:0;align-self:center}
+.visual-main{position:relative;inset:auto;width:100%;aspect-ratio:2.5/1;height:auto}
+.visual-main .visual-photo img{object-fit:cover;object-position:center}
+.visual-content{padding:26px}
+@media(max-width:560px){.hero-visual{min-height:0}.visual-main{aspect-ratio:2.5/1}.visual-content{padding:18px}.route{font-size:.58rem}.visual-title{font-size:1.35rem}.route-line{font-size:.62rem}.statbar{display:none}}
+
+/* Service-card banners also keep their complete source composition */
+.service-card .service-card-image{height:auto;aspect-ratio:2.5/1;margin-bottom:24px;overflow:hidden}
+.service-card .service-card-image img{width:100%;height:100%;object-fit:cover;object-position:center}
 </style>
 </head>
 <body>
@@ -216,7 +250,7 @@ footer{background:#06100c;color:#9eaca5;padding:40px 0}.footer-grid{display:flex
 <div class="hero-trust"><span>Supplier sourcing</span><span>Procurement support</span></div>
 </div>
 <div class="hero-visual">
-<div class="visual-main"><div class="visual-photo"><img src="global-clean.jpg" alt="Product inspection and China sourcing warehouse"></div><div class="visual-content">
+<div class="visual-main"><div class="visual-photo"><img src="global-clean.jpg" alt="International product sourcing collaboration"></div><div class="visual-content">
 <div class="route">JADEBRIDGE CO. • GLOBAL SOURCING</div>
 <div><div class="visual-title">From product idea to confident procurement.</div><div class="route-line" style="margin-top:25px"><span>PRODUCT</span><i></i><span>SUPPLIER</span><i></i><span>PROCUREMENT</span></div></div>
 <div class="statbar"><div class="stat"><strong>01</strong><small>Source</small></div><div class="stat"><strong>02</strong><small>Verify</small></div><div class="stat"><strong>03</strong><small>Procure</small></div></div>
@@ -229,16 +263,16 @@ footer{background:#06100c;color:#9eaca5;padding:40px 0}.footer-grid{display:flex
 <section class="procurement-hero-banner" aria-label="From product idea to confident procurement">
   <div class="container">
     <div class="clean-banner-intro"><div class="kicker">Jadebridge Co. • Global sourcing</div><h2>From product idea to confident procurement.</h2><div class="banner-route"><span>PRODUCT</span><i></i><span>SUPPLIER</span><i></i><span>PROCUREMENT</span></div></div>
-    <div class="procurement-banner-card clean-visual-banner"><img src="global-clean.jpg" alt="International sourcing and procurement collaboration"></div>
+    <div class="procurement-banner-card clean-visual-banner"><img src="sourcing-clean.jpg" alt="International product sourcing and supplier discovery"></div>
   </div>
 </section>
 
 <section id="services"><div class="container">
 <div class="section-head"><div class="kicker">Our services</div><h2 class="section-title">Professional sourcing support for every stage of your business.</h2><p>Whether you're starting small, testing a new product or buying at scale, we help you navigate the China sourcing process with a clear, professional approach.</p></div>
 <div class="cards">
-<article class="card service-card"><div class="service-card-image"><img src="global-clean.jpg" alt="China product sourcing and supplier discovery"></div><div class="icon">01</div><h3>China Product Sourcing</h3><p>We identify suitable Chinese suppliers and products based on your specifications, target market and business goals.</p><a class="card-link" href="https://wa.me/2349067771847?text=Hello%20Jadebridge%20Co.%2C%20I%20would%20like%20to%20request%20China%20product%20sourcing%20support." target="_blank" rel="noopener">Request sourcing →</a></article>
+<article class="card service-card"><div class="service-card-image"><img src="sourcing-clean.jpg" alt="China product sourcing and supplier discovery"></div><div class="icon">01</div><h3>China Product Sourcing</h3><p>We identify suitable Chinese suppliers and products based on your specifications, target market and business goals.</p><a class="card-link" href="https://wa.me/2349067771847?text=Hello%20Jadebridge%20Co.%2C%20I%20would%20like%20to%20request%20China%20product%20sourcing%20support." target="_blank" rel="noopener">Request sourcing →</a></article>
 <article class="card service-card"><div class="service-card-image"><img src="procurement-clean.jpg" alt="Professional procurement coordination"></div><div class="icon">02</div><h3>Procurement Services</h3><p>We coordinate supplier communication, quotations and purchasing requirements so you can focus on running and growing your business.</p><a class="card-link" href="https://wa.me/2349067771847?text=Hello%20Jadebridge%20Co.%2C%20I%20would%20like%20to%20explore%20your%20procurement%20services." target="_blank" rel="noopener">Explore procurement →</a></article>
-<article class="card service-card"><div class="service-card-image"><img src="global-clean.jpg" alt="Supplier verification and quality control"></div><div class="icon">03</div><h3>Supplier Verification & Quality Control</h3><p>We help you assess supplier information, clarify product specifications and coordinate quality checks before you commit to a purchase.</p><a class="card-link" href="https://wa.me/2349067771847?text=Hello%20Jadebridge%20Co.%2C%20I%20would%20like%20to%20explore%20supplier%20verification%20and%20quality%20control." target="_blank" rel="noopener">Explore verification →</a></article>
+<article class="card service-card"><div class="service-card-image"><img src="verification-clean.jpg" alt="Supplier verification and quality control"></div><div class="icon">03</div><h3>Supplier Verification & Quality Control</h3><p>We help you assess supplier information, clarify product specifications and coordinate quality checks before you commit to a purchase.</p><a class="card-link" href="https://wa.me/2349067771847?text=Hello%20Jadebridge%20Co.%2C%20I%20would%20like%20to%20explore%20supplier%20verification%20and%20quality%20control." target="_blank" rel="noopener">Explore verification →</a></article>
 </div></div></section>
 
 <section id="sourcing" class="service-detail"><div class="container split">
@@ -297,10 +331,10 @@ footer{background:#06100c;color:#9eaca5;padding:40px 0}.footer-grid{display:flex
 </div></section>
 
 <section><div class="container"><div class="section-head"><div class="kicker">What can we help you source?</div><h2 class="section-title">Products across categories with real business potential.</h2><p>These are examples—not limits. Tell us what you’re looking for and we’ll assess the sourcing requirement.</p></div>
-<div class="image-grid">
-<div class="category-banner" style="background-image:url(beauty-clean.jpg)"><div class="category-banner-copy"><div class="kicker" style="color:#7ce0af">01</div><h3>Beauty & Personal Care</h3><p>Skincare, haircare, beauty tools, wellness and everyday personal-care products.</p></div></div>
-<div class="category-banner" style="background-image:url(home-clean.jpg)"><div class="category-banner-copy"><div class="kicker" style="color:#7ce0af">02</div><h3>Home & Lifestyle</h3><p>Kitchenware, home organisation, household products, décor and lifestyle goods.</p></div></div>
-<div class="category-banner" style="background-image:url(b2b-clean.jpg)"><div class="category-banner-copy"><div class="kicker" style="color:#7ce0af">03</div><h3>Business & B2B Products</h3><p>Bulk products, commercial supplies, equipment and business-use sourcing.</p></div></div>
+<div class="image-grid category-grid">
+<div class="category-card"><img class="category-image" src="beauty-clean.jpg" alt="Beauty and personal care products"><div class="category-banner-copy"><div class="kicker">01</div><h3>Beauty & Personal Care</h3><p>Skincare, haircare, beauty tools, wellness and everyday personal-care products.</p></div></div>
+<div class="category-card"><img class="category-image" src="home-clean.jpg" alt="Home and lifestyle products"><div class="category-banner-copy"><div class="kicker">02</div><h3>Home & Lifestyle</h3><p>Kitchenware, home organisation, household products, décor and lifestyle goods.</p></div></div>
+<div class="category-card"><img class="category-image" src="b2b-clean.jpg" alt="Business and B2B products"><div class="category-banner-copy"><div class="kicker">03</div><h3>Business & B2B Products</h3><p>Bulk products, commercial supplies, equipment and business-use sourcing.</p></div></div>
 </div></div></section>
 
 <section class="audience client-stories"><div class="container"><div class="section-head"><div class="kicker">Client feedback</div><h2 class="section-title">What our clients say.</h2><p>Real-world sourcing support, clearer supplier communication and a more confident procurement process.</p></div>
@@ -441,13 +475,9 @@ function sendQuote(e){
       const data=await r.json(); if(data.sessionId){sessionId=data.sessionId;localStorage.setItem('jadebridgeChatSession',sessionId)} const reply=data.answer||data.reply||data.message||'Thanks. Please continue with Jadebridge Co. on WhatsApp or use the Request a Quote form.';
       history.push({role:'assistant',content:reply}); addMessage(reply,'bot');
     }catch(err){
-      const lower=text.toLowerCase();
-      let reply='I can help with China product sourcing, supplier discovery, supplier verification, procurement coordination, quality-control questions, product categories, order planning, international sourcing and general business questions. If I do not have enough information to answer accurately, I will tell you and direct you to Jadebridge Co. for the right human assistance.';
-      if(/supplier|source|factory|manufacturer/.test(lower)) reply='We can help research suitable suppliers based on your product, specifications, quantity and target market. You can start a sourcing request below.';
-      else if(/procure|bulk|purchase|b2b/.test(lower)) reply='Our procurement support can cover supplier communication, quotations, product requirements and purchase coordination based on the agreed scope.';
-      else if(/price|cost|quote/.test(lower)) reply='Pricing depends on the product, quantity, specifications and sourcing scope. You can ask your question here or contact Jadebridge Co. directly for a project-specific assessment.';
+      const reply='I’m sorry, I don’t have enough information to answer that accurately right now. Your question is not restricted to the quick options above, so please continue with your question or contact Jadebridge Co. directly for the right human assistance.';
       addMessage(reply,'bot');
-      if(!/supplier|source|procure|verify|quality|price|cost|quote/.test(lower)) setTimeout(()=>addAction('Contact Jadebridge Co. on WhatsApp →','https://wa.me/2349067771847?text=Hello%20Jadebridge%20Co.%2C%20I%20have%20a%20question.'),250);
+      setTimeout(()=>addAction('Contact Jadebridge Co. on WhatsApp →','https://wa.me/2349067771847?text=Hello%20Jadebridge%20Co.%2C%20I%20have%20a%20question.'),250);
     }
   }
   function answer(key){const text={supplier:'I need a supplier',procurement:'I need procurement support',international:'I’m an international client',quote:'I want to request a quote'}[key];if(text) askAI(text);if(key==='quote')setTimeout(()=>addAction('Open Request a Quote →','#quote'),300);if(key==='supplier')setTimeout(()=>addAction('Start a sourcing request →','#sourcing'),300);if(key==='procurement')setTimeout(()=>addAction('View procurement support →','#procurement'),300)}
